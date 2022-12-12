@@ -27,7 +27,7 @@ swapValues(2, 4);
 swapValues("You", "Me");
 swapValues("Vaibhav", "Kalpesh");
 
-
+console.log("------------------------------------------------------");
 console.log("******* Function with arguement and return values ******")
 
 function rajuBhaiya(paisa){
@@ -37,4 +37,16 @@ function rajuBhaiya(paisa){
     return bagOfVegetables;
 }
 var bagOfVegetables = rajuBhaiya(100);
-console.log(bagOfVegetables);
+console.log(bagOfVegetables)
+
+console.log("-----------------------------------------------------");
+
+function multiply(num1, num2){
+    var result = num1 * num2;
+    console.log(result);
+    return result;
+}
+multiply(56,46);
+var multiplyResult = multiply(56,56);
+var finalResult = multiplyResult + 100;
+console.log(multiplyResult);
