@@ -50,12 +50,12 @@ console.log( "slice() with start index ",greet.slice(4));
 console.log("slice with negative start index: ", greet.slice(-7));
 console.log("slice with negative start and end index: ", greet.slice(-7, -2));
 
-var studList = "Dips|Jenny|Ganni|Manni|Shani";
+var studList = "Piyush|Vaibhav|Shubham|Kalpesh|Vikrant";
 var studListSplit = studList.split("|");
 console.log(" Student list after split by char ,", studListSplit);
 console.log("Total number students: ", studListSplit.length);
 
-var studList = "Dips|Jenny|Ganni|Manni|Shani";
+var studList = "Piyush|Vaibhav|Shubham|Kalpesh|Vikrant";
 var studListSplit = studList.split("|");
 console.log(" Student list after split by char ,", studListSplit);
 console.log("Total number students: ", studListSplit.length);
