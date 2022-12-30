@@ -64,11 +64,11 @@ const student = {
     science: 70,
     math: 90,
     english: 87,
-    add: function() {
-        return this.science+this.math+this.english;
-    }
+    add: function () {
+      return this.science + this.math + this.english;
+    },
   },
-  familyMemberNames: [ 'Tony', 'Lonny', 'Jenny', 'Watigton']
+  familyMemberNames: ["Tony", "Lonny", "Jenny", "Watigton"],
 };
 console.log(`Accessing an Nested object property`);
 const scienceMark = student.marks.science;
@@ -84,19 +84,41 @@ console.log(`Deleting an Nested object property`);
 //delete student.marks.english;
 
 console.log(`Accessing add in Nested object function `);
-const totalMarks = student.marks. add () ;
-console.log (`Total Marks: ${totalMarks}`);
+const totalMarks = student.marks.add();
+console.log(`Total Marks: ${totalMarks}`);
 
 console.log(`Accessing an array`);
 console.log(student.familyMemberNames);
 
 console.log(`Object entries`);
 const billgates = {
-    height: 6,
-    weight: 70,
-    age: 23,
-    name: "Billgates"
+  height: 6,
+  weight: 70,
+  age: 23,
+  name: "Billgates",
+  company: "Microsoft",
+  valuation: "130B $",
+};
+// console.log(Object.entries(billgates));
+// console.log(Object.keys(billgates));
+// console.log(Object.values(billgates));
+
+console.log(`========== in operator ================`);
+let isAvailable = "height" in billgates;
+if (isAvailable) {
+  delete billgates.height;
+  console.log(`"height" property is deleted successfully`);
+} else {
+  console.log(`"height" property not deleted as it is available inside object`);
 }
-console.log(Object.entries(billgates));
-console.log(Object.keys(billgates));
-console.log(Object.values(billgates));
+
+console.log(`=========== for in loop ==============`);
+for (const key in billgates) {
+  if (Object.hasOwnProperty.call(billgates, key)) {
+    // This line not compulsory it used for log the own property
+    const element = billgates[key];
+    console.log(key, element);
+  }
+}
+
+
