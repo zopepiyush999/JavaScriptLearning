@@ -61,11 +61,13 @@ const empDhir = new Employee(22, "Dheeraj", 24, "MUMBAI");
 const empSachin = new Employee(33, "Sachin", 22, "Surat");
 const empGayatri = new Employee(44, "Gayatri", 21, "Bangluru");
 
-// Collection - Collection of elements 
+// Collection - Collection of elements
 // Elements of Datatypes - Primitive and Non primitive (Reference)
-const arrayOfEmployees = [ empSup, empDhir, empGayatri, empSachin];
+const arrayOfEmployees = [empSup, empDhir, empGayatri, empSachin];
 for (const employee of arrayOfEmployees) {
-    console.log(`Employee details are: ${employee.empId}  ${employee.empName} ${employee.empCity}  `);
+  console.log(
+    `Employee details are: ${employee.empId}  ${employee.empName} ${employee.empCity}  `
+  );
 }
 
 const setOfEmployees = new Set();
@@ -73,3 +75,10 @@ setOfEmployees.add(empSup);
 setOfEmployees.add(empDhir);
 setOfEmployees.add(empSachin);
 setOfEmployees.add(empGayatri);
+
+const keyOfMapEmployee = mapOfEmployees.keys();
+console.log(keyOfMapEmployee);
+for (const key of keyOfMapEmployee) {
+  const employee = mapOfEmployees.get(key);
+  console.log(employee.empName, employee.empCity);
+}
