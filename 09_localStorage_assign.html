@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Local Storage </title>
+</head>
+<body>
+    <h1> Local Storage learning</h1>
+    <script>
+        console.log("Hello -------> Local Storage");
+        window.localStorage.setItem("name", "Piyush Atmaram Zope");
+        window.localStorage.setItem("city", "Bhusawal");
+        window.localStorage.setItem("pinCode", "425201");
+        window.localStorage.setItem("district", "Jalgaon");
+        const len = window.localStorage.length;
+        console.log(len);
+        window.localStorage.removeItem("city");
+    </script>
+</body>
+</html>
